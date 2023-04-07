@@ -6,9 +6,7 @@ string[] array = new string[n];
 
 Console.WriteLine("Введите элементы массива:");
 for (int i = 0; i < n; i++)
-{
-    array[i] = Console.ReadLine();
-}
+{array[i] = Console.ReadLine();}
 
 string[] newArray = new string[n];
 int count = 0;
@@ -16,8 +14,11 @@ int count = 0;
 for (int i = 0; i < n; i++)
 {
     if (array[i].Length <= 3)
-    {
-        newArray[count] = array[i];
-        count++;
-    }
-}
+    {newArray[count] = array[i];
+        count++;}}
+
+Array.Resize(ref newArray, count);
+
+Console.WriteLine("Новый массив:");
+for (int i = 0; i < count; i++)
+{Console.WriteLine(newArray[i]);}

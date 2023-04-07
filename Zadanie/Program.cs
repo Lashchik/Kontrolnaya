@@ -9,3 +9,15 @@ for (int i = 0; i < n; i++)
 {
     array[i] = Console.ReadLine();
 }
+
+string[] newArray = new string[n];
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[count] = array[i];
+        count++;
+    }
+}
